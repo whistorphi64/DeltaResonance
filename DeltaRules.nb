@@ -1,0 +1,321 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11365,        313]
+NotebookOptionsPosition[     10522,        293]
+NotebookOutlinePosition[     10945,        310]
+CellTagsIndexPosition[     10902,        307]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\:542bDelta\:56fe\:6240\:9700\:7528\:5230\:7684feynrules", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.9107523949222083`*^9, 3.9107524615762506`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"12e73c96-be5b-4a4b-8730-1fd2197b1588"],
+
+Cell[BoxData[
+ RowBox[{"(*", "\:4e0d\:542bDelta\:7684feynrules", "*)"}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"32a34a04-eaeb-4a32-a3e6-85c11a2b1648"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vgapipi", "[", 
+    RowBox[{"k1_", ",", "a_", ",", "k2_", ",", "b_", ",", "\[Mu]_"}], "]"}], ":>", 
+   RowBox[{"e", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Pair", "[", 
+       RowBox[{
+        RowBox[{"LorentzIndex", "[", 
+         RowBox[{"\[Mu]", ",", "D"}], "]"}], ",", 
+        RowBox[{"Momentum", "[", 
+         RowBox[{"k2", ",", "D"}], "]"}]}], "]"}], "-", 
+      RowBox[{"Pair", "[", 
+       RowBox[{
+        RowBox[{"LorentzIndex", "[", 
+         RowBox[{"\[Mu]", ",", "D"}], "]"}], ",", 
+        RowBox[{"Momentum", "[", 
+         RowBox[{"k1", ",", "D"}], "]"}]}], "]"}]}], ")"}], 
+    RowBox[{"LeviCivita", "[", 
+     RowBox[{"a", ",", "b", ",", "3"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vgagapipi", "[", 
+    RowBox[{
+    "k1_", ",", "a_", ",", "k2_", ",", "b_", ",", "\[Mu]_", ",", "\[Nu]_"}], 
+    "]"}], ":>", 
+   RowBox[{
+    RowBox[{"-", "2"}], "I", " ", 
+    RowBox[{"e", "^", "2"}], "  ", 
+    RowBox[{"MT", "[", 
+     RowBox[{"\[Mu]", ",", "\[Nu]"}], "]"}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"CartesianPair", "[", 
+        RowBox[{
+         RowBox[{"CartesianIndex", "[", "a", "]"}], ",", 
+         RowBox[{"CartesianIndex", "[", "3", "]"}]}], "]"}], 
+       RowBox[{"CartesianPair", "[", 
+        RowBox[{
+         RowBox[{"CartesianIndex", "[", "b", "]"}], ",", 
+         RowBox[{"CartesianIndex", "[", "3", "]"}]}], "]"}]}], "-", 
+      RowBox[{"CartesianPair", "[", 
+       RowBox[{
+        RowBox[{"CartesianIndex", "[", "a", "]"}], ",", 
+        RowBox[{"CartesianIndex", "[", "b", "]"}]}], "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vgapp", "[", 
+    RowBox[{"p1_", ",", "p2_", ",", "\[Mu]_"}], "]"}], ":>", 
+   RowBox[{"I", " ", "e", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"PauliMatrix", "[", "3", "]"}]}], ")"}], "/", "2"}], " ", 
+    RowBox[{"DiracGamma", "[", 
+     RowBox[{"LorentzIndex", "[", "\[Mu]", "]"}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.910752493503745*^9, 3.910752585325905*^9}, {
+  3.9107527356750903`*^9, 3.910752792551612*^9}, {3.910752830669075*^9, 
+  3.9107528575227375`*^9}, {3.910752891450009*^9, 3.9107529355258694`*^9}, {
+  3.9107529985060587`*^9, 3.910753019828931*^9}, {3.910753078626812*^9, 
+  3.910753107921688*^9}, {3.9107531501821804`*^9, 
+  3.9107532951644344`*^9}},ExpressionUUID->"387176c4-6cf4-4db5-8f20-\
+fefe6eae9137"],
+
+Cell[BoxData[
+ RowBox[{"(*", "\:542bDelta\:7684feynrules", "*)"}]], "Input",
+ CellChangeTimes->{{3.9107524660563354`*^9, 3.9107524763111486`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"546ae79d-2fd5-4bcf-9f4b-6aeba9a731f5"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vdpip", "[", 
+    RowBox[{"\[Mu]_", ",", "b_", ",", "k_", ",", "a_"}], "]"}], ":>", 
+   RowBox[{
+    RowBox[{"hA", "/", "F"}], " ", 
+    RowBox[{"Pair", "[", 
+     RowBox[{
+      RowBox[{"LorentzIndex", "[", 
+       RowBox[{"\[Mu]", ",", "D"}], "]"}], ",", 
+      RowBox[{"Momentum", "[", 
+       RowBox[{"k", ",", "D"}], "]"}]}], "]"}], " ", 
+    RowBox[{"CartesianPair", "[", 
+     RowBox[{
+      RowBox[{"CartesianIndex", "[", "a", "]"}], ",", 
+      RowBox[{"CartesianIndex", "[", "b", "]"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vdpipga", "[", 
+    RowBox[{"\[Nu]_", ",", "b_", ",", "k_", ",", "a_", ",", "\[Mu]_"}], "]"}],
+    ":>", 
+   RowBox[{
+    RowBox[{"-", "I"}], " ", "e", " ", 
+    RowBox[{"hA", "/", "F"}], " ", 
+    RowBox[{"MT", "[", 
+     RowBox[{"\[Mu]", ",", "\[Nu]"}], "]"}], " ", 
+    RowBox[{"LeviCivita", "[", 
+     RowBox[{"a", ",", "b", ",", "3"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vdpga", "[", 
+    RowBox[{"\[Nu]_", ",", "b_", ",", "q_", ",", "\[Mu]_"}], "]"}], ":>", 
+   RowBox[{"I", " ", "e", " ", 
+    RowBox[{"b1", "/", "2"}], " ", 
+    RowBox[{"Pair", "[", 
+     RowBox[{
+      RowBox[{"LorentzIndex", "[", 
+       RowBox[{"\[Alpha]", ",", "D"}], "]"}], ",", 
+      RowBox[{"Momentum", "[", 
+       RowBox[{"q", ",", "D"}], "]"}]}], "]"}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"DiracGamma", "[", "\[Alpha]", "]"}], " ", 
+       RowBox[{"MT", "[", 
+        RowBox[{"\[Mu]", ",", "\[Nu]"}], "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"DiracGamma", "[", "\[Nu]", "]"}], 
+       RowBox[{"MT", "[", 
+        RowBox[{"\[Mu]", ",", "\[Alpha]"}], "]"}]}]}], ")"}], "GA5", " ", 
+    RowBox[{"CartesianPair", "[", 
+     RowBox[{
+      RowBox[{"CartesianIndex", "[", "b", "]"}], ",", 
+      RowBox[{"CartesianIndex", "[", "3", "]"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vddga", "[", 
+    RowBox[{
+    "\[Alpha]_", ",", "a_", ",", "\[Beta]_", ",", "b_", ",", "\[Mu]_"}], 
+    "]"}], ":>", 
+   RowBox[{
+    RowBox[{"e", "/", "2"}], " ", 
+    RowBox[{"LeviCivita", "[", 
+     RowBox[{"\[Mu]", ",", "\[Nu]", ",", "\[Alpha]", ",", "\[Beta]"}], "]"}], 
+    RowBox[{"DiracGamma", "[", "\[Mu]", "]"}], "GA5", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"3", 
+       RowBox[{"PauliMatrix", "[", "3", "]"}]}]}], ")"}], 
+    RowBox[{"CartesianPair", "[", 
+     RowBox[{
+      RowBox[{"CartesianIndex", "[", "a", "]"}], ",", 
+      RowBox[{"CartesianIndex", "[", "b", "]"}]}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.910753648520211*^9, 3.9107538984778013`*^9}, {
+  3.9107539977112775`*^9, 3.9107540088785744`*^9}, {3.9107540438501444`*^9, 
+  3.91075406285616*^9}, {3.9107540971870947`*^9, 3.910754317785268*^9}, {
+  3.9107555437613063`*^9, 3.910755559715394*^9}, {3.910755609884433*^9, 
+  3.910755614262971*^9}},ExpressionUUID->"78303ec0-7bb4-49eb-8a6d-\
+5d309e36ea75"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:4f20\:64ad\:5b50\:7684feynrules", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Ppga", "[", 
+      RowBox[{"pi", ",", "p_", ",", "M_"}], "]"}], ":>", 
+     RowBox[{"FeynAmpDenominator", "[", 
+      RowBox[{
+       RowBox[{"PropagatorDenominator", "[", 
+        RowBox[{"Momentum", "[", 
+         RowBox[{"p", ",", "D"}], "]"}], "]"}], ",", "M"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Ppga", "[", 
+      RowBox[{"p", ",", "p_", ",", "mN_"}], "]"}], ":>", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"DiracSlash", "[", "p", "]"}], "+", "mN"}], ")"}], 
+      RowBox[{"FeynAmpDenominator", "[", 
+       RowBox[{
+        RowBox[{"PropagatorDenominator", "[", 
+         RowBox[{"Momentum", "[", 
+          RowBox[{"p", ",", "D"}], "]"}], "]"}], ",", "mN"}], "]"}]}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Ppga", "[", 
+      RowBox[{
+      "delta", ",", "p_", ",", "mdelta_", ",", "\[Mu]_", ",", "\[Nu]_"}], 
+      "]"}], ":>", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"DiracSlash", "[", "p", "]"}], "+", "mN"}], ")"}]}], 
+      RowBox[{"FeynAmpDenominator", "[", 
+       RowBox[{
+        RowBox[{"PropagatorDenominator", "[", 
+         RowBox[{"Momentum", "[", 
+          RowBox[{"p", ",", "D"}], "]"}], "]"}], ",", "mN"}], "]"}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"MT", "[", 
+         RowBox[{"\[Mu]", ",", "\[Nu]"}], "]"}], "-", 
+        RowBox[{
+         RowBox[{"DiracGamma", "[", "\[Mu]", "]"}], 
+         RowBox[{
+          RowBox[{"DiracGamma", "[", "\[Nu]", "]"}], "/", 
+          RowBox[{"(", 
+           RowBox[{"d", "-", "1"}], ")"}]}]}], "+", 
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["1", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"d", "-", "1"}], ")"}], "*", "mdelta"}]], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Pair", "[", 
+              RowBox[{
+               RowBox[{"LorentzIndex", "[", 
+                RowBox[{"\[Mu]", ",", "D"}], "]"}], ",", 
+               RowBox[{"Momentum", "[", 
+                RowBox[{"p", ",", "D"}], "]"}]}], "]"}], 
+             RowBox[{"DiracGamma", "[", "\[Nu]", "]"}]}], "-", 
+            RowBox[{
+             RowBox[{"DiracGamma", "[", "\[Mu]", "]"}], 
+             RowBox[{"Pair", "[", 
+              RowBox[{
+               RowBox[{"LorentzIndex", "[", 
+                RowBox[{"\[Nu]", ",", "D"}], "]"}], ",", 
+               RowBox[{"Momentum", "[", 
+                RowBox[{"p", ",", "D"}], "]"}]}], "]"}]}]}], ")"}]}], ")"}], 
+        "-", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"d", "-", "2"}], 
+          RowBox[{"d", "-", "1"}]], "*", 
+         FractionBox["1", "mdelta"], 
+         RowBox[{"Pair", "[", 
+          RowBox[{
+           RowBox[{"LorentzIndex", "[", 
+            RowBox[{"\[Mu]", ",", "D"}], "]"}], ",", 
+           RowBox[{"Momentum", "[", 
+            RowBox[{"p", ",", "D"}], "]"}]}], "]"}], 
+         RowBox[{"Pair", "[", 
+          RowBox[{
+           RowBox[{"LorentzIndex", "[", 
+            RowBox[{"\[Nu]", ",", "D"}], "]"}], ",", 
+           RowBox[{"Momentum", "[", 
+            RowBox[{"p", ",", "D"}], "]"}]}], "]"}]}]}], ")"}]}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.910754338295536*^9, 3.910754403326477*^9}, {
+  3.9107546078259983`*^9, 3.910754758759533*^9}, {3.910754805148929*^9, 
+  3.9107548093374863`*^9}, {3.910754907116335*^9, 3.910754910933588*^9}, {
+  3.9107549964046774`*^9, 3.910755414028902*^9}, {3.910755629725108*^9, 
+  3.910755674259427*^9}},ExpressionUUID->"7872219a-a673-4acc-b40f-\
+bcb279785034"]
+},
+WindowSize->{573.75, 556.5},
+WindowMargins->{{Automatic, 170.25}, {-9.75, Automatic}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (2021\:5e747\:67089\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"efb44711-d27d-49e3-874d-f3edfd717493"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 257, 4, 28, "Input",ExpressionUUID->"12e73c96-be5b-4a4b-8730-1fd2197b1588"],
+Cell[818, 26, 160, 2, 28, "Input",ExpressionUUID->"32a34a04-eaeb-4a32-a3e6-85c11a2b1648"],
+Cell[981, 30, 2508, 67, 282, "Input",ExpressionUUID->"387176c4-6cf4-4db5-8f20-fefe6eae9137"],
+Cell[3492, 99, 224, 3, 28, "Input",ExpressionUUID->"546ae79d-2fd5-4bcf-9f4b-6aeba9a731f5"],
+Cell[3719, 104, 3012, 82, 322, "Input",ExpressionUUID->"78303ec0-7bb4-49eb-8a6d-5d309e36ea75"],
+Cell[6734, 188, 3784, 103, 514, "Input",ExpressionUUID->"7872219a-a673-4acc-b40f-bcb279785034"]
+}
+]
+*)
+
